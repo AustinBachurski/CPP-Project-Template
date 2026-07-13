@@ -1,26 +1,5 @@
 Language: Cpp
 
-# A vector of strings that should be interpreted as
-# attributes/qualifiers instead of identifiers.
-# Example: `AttributeMacros: [__capability, __output, __unused]`
-#
-#AttributeMacros: []
-
-# A vector of macros that should be interpreted as foreach loops instead of as
-# function calls.
-#
-#ForEachMacros: []
-
-# A regular expression that describes comments with special meaning, which
-# should not be split into lines or otherwise changed.
-#
-#CommentPragmas: ''
-
-# A vector of macros that should be interpreted as conditionals instead of as
-# function calls.
-#
-# IfMacros: []
-
 AccessModifierOffset: -3
 AlignAfterOpenBracket: false
 AlignArrayOfStructures: Left
@@ -40,7 +19,7 @@ AlignConsecutiveDeclarations:
   Enabled: true
   AcrossEmptyLines: false
   AcrossComments: true
-  AlignCompound:   true
+  AlignCompound: true
   AlignFunctionDeclarations: true
   AlignFunctionPointers: false
 AlignConsecutiveMacros:
@@ -165,21 +144,6 @@ EnumTrailingComma: Leave  # Would prefer `insert` but see above...
 ExperimentalAutoDetectBinPacking: false
 FixNamespaceComments: true
 IncludeBlocks: Preserve
-IncludeCategories:
-  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
-    Priority:        2
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '^(<|"(gtest|gmock|isl|json)/)'
-    Priority:        3
-    SortPriority:    0
-    CaseSensitive:   false
-  - Regex:           '.*'
-    Priority:        1
-    SortPriority:    0
-    CaseSensitive:   false
-IncludeIsMainRegex: '(Test)?$'
-IncludeIsMainSourceRegex: ''
 IndentAccessModifiers: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
@@ -214,26 +178,29 @@ KeepFormFeed: false
 LambdaBodyIndentation: OuterScope
 LineEnding: LF
 MacroBlockBegin: ''
-MacroBlockEnd:   ''
+MacroBlockEnd: ''
 MainIncludeChar: Quote
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 NumericLiteralCase:
   ExponentLetter: Lower
   HexDigit: Lower
-  Prefix: lower
+  Prefix: Lower
   Suffix: Upper
 ObjCBinPackProtocolList: Auto
 ObjCBlockIndentWidth: 3
 ObjCBreakBeforeNestedBlockParam: false
-ObjCSpaceAfterMethodDeclarationPrefix: false
+# Clang23
+#ObjCSpaceAfterMethodDeclarationPrefix: false
 ObjCSpaceAfterProperty: false
 ObjCSpaceBeforeProtocolList: false
 OneLineFormatOffRegex: ''
 PPIndentWidth: -1
-PackArguments: OnePerLine
+# Clang23
+#PackArguments: OnePerLine
 PackConstructorInitializers: Never
-PackParameters: OnePerLine
+# Clang23
+#PackParameters: OnePerLine
 # PENALTY - Leaving all the penalties at their defaults.
 PointerAlignment: Right
 # Warning - QualifierAlignment
@@ -242,8 +209,70 @@ PointerAlignment: Right
 # lack of complete semantic information. As such extra care should be taken to
 # review code changes made by the use of this option.
 QualifierAlignment: Leave
-QualifierOrder: [inline, static, constexpr, friend, type, const, volatile, restrict]
-# clang-format --style=file:.clang-format --dump-config
-
-
-
+# Should work but doesn't?
+#QualifierOrder: [inline, static, constexpr, friend, type, const, volatile, restrict]
+ReferenceAlignment: Right
+ReflowComments: Always
+RemoveBracesLLVM: false
+RemoveEmptyLinesInUnwrappedLines: true
+RemoveParentheses: Leave
+RemoveSemicolon: false
+RequiresClausePosition: OwnLineWithBrace
+RequiresExpressionIndentation: OuterScope
+SeparateDefinitionBlocks: Always
+ShortNamespaceLines: 0
+SkipMacroDefinitionBody: false
+SortIncludes:
+  Enabled: true
+  IgnoreCase: false
+  IgnoreExtension: false
+SortJavaStaticImport: Before
+SortUsingDeclarations: LexicographicNumeric
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterOperatorKeyword: false
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeJsonColon: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterFunctionDefinitionName: false
+  AfterFunctionDeclarationName: false
+  AfterIfMacros: true
+  AfterNot: false
+  AfterOverloadedOperator: false
+  AfterPlacementOperator: true
+  AfterRequiresInClause: false
+  AfterRequiresInExpression: false
+  BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBraces: Never
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: Never
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: true
+  InCStyleCasts: false
+  InConditionalStatements: false
+  InEmptyParentheses: false
+  Other: false
+SpacesInSquareBrackets: false
+Standard: Latest
+TabWidth: 8
+TableGenBreakInsideDAGArg: BreakAll
+TableGenBreakingDAGArgOperators: [ins, outs]
+UseTab: Never
+VerilogBreakBetweenInstancePorts: true
+WrapNamespaceBodyWithEmptyLines: Always
