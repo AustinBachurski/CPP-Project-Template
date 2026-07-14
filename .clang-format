@@ -1,31 +1,12 @@
 Language: Cpp
 
-AccessModifierOffset: -3
+AccessModifierOffset: -2
 AlignAfterOpenBracket: false
 AlignArrayOfStructures: Left
-AlignConsecutiveAssignments:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCompound: true
-  # Clang23
-  #EnumAssignments: true
-  PadOperators: true
-AlignConsecutiveBitFields:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-AlignConsecutiveDeclarations:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCompound: true
-  AlignFunctionDeclarations: true
-  AlignFunctionPointers: false
-AlignConsecutiveMacros:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
+AlignConsecutiveAssignments: None
+AlignConsecutiveBitFields: None
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: None
 AlignConsecutiveShortCaseStatements:
   Enabled: true
   AcrossEmptyLines: false
@@ -74,7 +55,9 @@ AllowShortNamespacesOnASingleLine: true
 # Clang23
 #AllowShortRecordOnASingleLine: EmptyAndAttached
 AlwaysBreakBeforeMultilineStrings: true
+BinPackArguments: false
 BinPackLongBracedList: true
+BinPackParameters: false
 BitFieldColonSpacing: Both
 BracedInitializerIndentWidth: 2
 BreakAdjacentStringLiterals: true
@@ -112,7 +95,7 @@ BreakBeforeCloseBracketFunction: true
 BreakBeforeCloseBracketIf: true
 BreakBeforeCloseBracketLoop: true
 BreakBeforeCloseBracketSwitch: true
-BreakBeforeConceptDeclarations: Allowed
+BreakBeforeConceptDeclarations: Always
 BreakBeforeInlineASMColon: OnlyMultiline
 # Clang23
 #BreakBeforeReturnType: None
@@ -125,7 +108,7 @@ BreakConstructorInitializers: BeforeComma
 BreakFunctionDefinitionParameters: false
 BreakInheritanceList: AfterComma
 BreakStringLiterals: true
-BreakTemplateDeclarations: MultiLine
+BreakTemplateDeclarations: Yes
 ColumnLimit: 80
 CompactNamespaces: false
 ConstructorInitializerIndentWidth: 4
