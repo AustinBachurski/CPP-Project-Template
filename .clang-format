@@ -1,30 +1,25 @@
 Language: Cpp
+Standard: Latest
 
 AccessModifierOffset: -2
-AlignAfterOpenBracket: false
+AlignAfterOpenBracket: true
 AlignArrayOfStructures: Left
-AlignConsecutiveAssignments: None
-AlignConsecutiveBitFields: None
-AlignConsecutiveDeclarations: None
-AlignConsecutiveMacros: None
+AlignConsecutiveAssignments:
+  Enabled: false
+AlignConsecutiveBitFields:
+  Enabled: false
+AlignConsecutiveDeclarations:
+  Enabled: false
+AlignConsecutiveMacros:
+  Enabled: false
 AlignConsecutiveShortCaseStatements:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
-  AlignCaseArrows: true
-  AlignCaseColons: false
+  Enabled: false
 AlignConsecutiveTableGenBreakingDAGArgColons:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
+  Enabled: false
 AlignConsecutiveTableGenCondOperatorColons:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
+  Enabled: false
 AlignConsecutiveTableGenDefinitionColons:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: true
+  Enabled: false
 AlignEscapedNewlines: LeftWithLastLine
 AlignOperands: AlignAfterOperator
 AlignTrailingComments:
@@ -37,18 +32,13 @@ AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
 AllowBreakBeforeQtProperty: true
-AllowShortBlocksOnASingleLine: Always
+AllowShortBlocksOnASingleLine: Never
 AllowShortCaseExpressionOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: All
-  # Clang23
-  # Remove "All" from the above line and use the below.
-  #Empty: false
-  #Inline: true
-  #Other: true
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 AllowShortNamespacesOnASingleLine: true
@@ -68,7 +58,7 @@ BreakAfterOpenBracketFunction: true
 BreakAfterOpenBracketIf: true
 BreakAfterOpenBracketLoop: true
 BreakAfterOpenBracketSwitch: true
-BreakAfterReturnType: Automatic
+BreakAfterReturnType: All
 BreakArrays: false
 BreakBeforeBinaryOperators: All
 BreakBeforeBraces: Custom
@@ -90,11 +80,11 @@ BraceWrapping:
   SplitEmptyFunction: false
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
-BreakBeforeCloseBracketBracedList: true
-BreakBeforeCloseBracketFunction: true
-BreakBeforeCloseBracketIf: true
-BreakBeforeCloseBracketLoop: true
-BreakBeforeCloseBracketSwitch: true
+BreakBeforeCloseBracketBracedList: false
+BreakBeforeCloseBracketFunction: false
+BreakBeforeCloseBracketIf: false
+BreakBeforeCloseBracketLoop: false
+BreakBeforeCloseBracketSwitch: false
 BreakBeforeConceptDeclarations: Always
 BreakBeforeInlineASMColon: OnlyMultiline
 # Clang23
@@ -252,10 +242,10 @@ SpacesInParensOptions:
   InEmptyParentheses: false
   Other: false
 SpacesInSquareBrackets: false
-Standard: Latest
 TabWidth: 8
 TableGenBreakInsideDAGArg: BreakAll
 TableGenBreakingDAGArgOperators: [ins, outs]
 UseTab: Never
 VerilogBreakBetweenInstancePorts: true
 WrapNamespaceBodyWithEmptyLines: Always
+
