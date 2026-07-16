@@ -1,7 +1,7 @@
 Language: Cpp
 Standard: Latest
 
-AccessModifierOffset: -2
+AccessModifierOffset: -3
 AlignAfterOpenBracket: true
 AlignArrayOfStructures: Left
 AlignConsecutiveAssignments:
@@ -174,7 +174,9 @@ PPIndentWidth: -1
 PackConstructorInitializers: Never
 # Clang23
 #PackParameters: OnePerLine
+
 # PENALTY - Leaving all the penalties at their defaults.
+
 PointerAlignment: Right
 # Warning - QualifierAlignment
 # Setting QualifierAlignment to something other than Leave, COULD lead to 
@@ -183,7 +185,7 @@ PointerAlignment: Right
 # review code changes made by the use of this option.
 QualifierAlignment: Leave
 # Should work but doesn't?
-#QualifierOrder: [inline, static, constexpr, friend, type, const, volatile, restrict]
+#QualifierOrder: [static, inline, constexpr, friend, type, const, volatile, restrict]
 ReferenceAlignment: Right
 ReflowComments: Always
 RemoveBracesLLVM: false
